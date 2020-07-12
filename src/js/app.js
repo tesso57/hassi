@@ -7,5 +7,5 @@ const app = new PIXI.Application({
 });
 //index.htmlのappタグと紐づけ(mainタグ)
 document.getElementById('app').appendChild(app.view);
-
+app.stage.interactive = true;
 export default app;
