@@ -1,7 +1,11 @@
-export const sqrt = Math.sqrt;
-export function square(x) {
-    return x * x;
-}
-export function diag(x, y) {
-    return sqrt(square(x) + square(y));
-}
+'use strict'
+
+const app = new PIXI.Application({
+    width: 600, //動的に変えたい
+    height: 1000,//動的に変えたい
+    backgroundColor: 0x888888,
+});
+//index.htmlのappタグと紐づけ(mainタグ)
+document.getElementById('app').appendChild(app.view);
+
+export default app;

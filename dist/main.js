@@ -90,11 +90,11 @@
 /*!***********************!*\
   !*** ./src/js/app.js ***!
   \***********************/
-/*! exports provided: sqrt, square, diag */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sqrt\", function() { return sqrt; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"square\", function() { return square; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"diag\", function() { return diag; });\nconst sqrt = Math.sqrt;\r\nfunction square(x) {\r\n    return x * x;\r\n}\r\nfunction diag(x, y) {\r\n    return sqrt(square(x) + square(y));\r\n}\r\n\n\n//# sourceURL=webpack:///./src/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n\r\n\r\nconst app = new PIXI.Application({\r\n    width: 600, //動的に変えたい\r\n    height: 1000,//動的に変えたい\r\n    backgroundColor: 0x888888,\r\n});\r\n//index.htmlのappタグと紐づけ(mainタグ)\r\ndocument.getElementById('app').appendChild(app.view);\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (app);\n\n//# sourceURL=webpack:///./src/js/app.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.js */ \"./src/js/app.js\");\n\r\nconsole.log(_app_js__WEBPACK_IMPORTED_MODULE_0__[\"square\"](11)); // 121\r\nconsole.log(_app_js__WEBPACK_IMPORTED_MODULE_0__[\"diag\"](4, 3)); // 5\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app */ \"./src/js/app.js\");\n\r\nlet hassiTexture = new PIXI.Texture.from('src/img/chinanago.png');\r\nlet hassiSprite = new PIXI.Sprite(hassiTexture);\r\n\r\nhassiSprite._anchor.x = 0.5;\r\nhassiSprite._anchor.y = 0.5;\r\n\r\nhassiSprite.x = _app__WEBPACK_IMPORTED_MODULE_0__[\"default\"].screen.width /2;\r\nhassiSprite.y = _app__WEBPACK_IMPORTED_MODULE_0__[\"default\"].screen.height /2;\r\n\r\n_app__WEBPACK_IMPORTED_MODULE_0__[\"default\"].stage.addChild(hassiSprite);\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ })
 
