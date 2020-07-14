@@ -8,16 +8,34 @@ Pixi JSでチンアナゴを「にゅ」っとさせる
 .
 ├── README.md
 ├── index.html
-├── memo.md
-└── src
-    ├── css
-    │   └── windowfull.css
-    ├── img
-    │   ├── chinanago.png
-    │   ├── nettaigyo_chinanago2.png
-    │   └── trail.png
-    └── js
-        └── main.js
+├── others
+│   ├── README.md
+│   ├── custom-hitarea.js
+│   └── displacemment.js
+├── package-lock.json
+├── package.json
+├── src
+│   ├── css
+│   │   └── windowfull.css
+│   ├── img
+│   │   ├── bg_natural_ocean.jpg
+│   │   ├── bg_natural_umi.jpg
+│   │   ├── bg_pattern1_aozora.png
+│   │   ├── bg_pattern2_aozora.png
+│   │   ├── bg_pattern3_yuyake.png
+│   │   ├── bg_pattern4_yoru.png
+│   │   ├── chinanago.png
+│   │   ├── cloud.R.png
+│   │   ├── cloud.png
+│   │   ├── cloud2.png
+│   │   ├── cloud_L.png
+│   │   ├── displacement_map_repeat.jpg
+│   │   ├── nettaigyo_chinanago2.png
+│   │   └── trail.png
+│   └── js
+│       ├── app.js
+│       └── index.js
+└── webpack.config.js
 ```
 js はシーン、サウンド、動かす、っていう感じで分けたほうがよさそう？？
 
@@ -40,3 +58,6 @@ Spriteから持ち出せる_heightと_widthはオリジナルのサイズらし�
 hassiSprite.anchor.x = 0.5;//こうすることによって画像の真ん中で考えることができる。
 hassiSprite.anchor.y = 0.5;
 ```
+
+## 画像と音源について
+サーバーに問い合わせることによって、いちいち指定する必要がなくて便利になる。
