@@ -2,7 +2,7 @@ module.exports ={
     entry: `./src/js/index.js`,
 
     output:{
-        path: `${__dirname}/dist`,
+        path: `${__dirname}/public`,
         filename:"main.js"
     },
     //production -> 最適化(ビルドに時間かかるけどパフォーマンスいい感じ)
