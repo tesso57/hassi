@@ -1,7 +1,7 @@
 module.exports = {
     entry: `./client/src/js/index.ts`,
     output: {
-        path: `${__dirname}/public`,
+        path: `${__dirname}/public/src/js`,
         filename: "main.js"
     },
     //production -> 最適化(ビルドに時間かかるけどパフォーマンスいい感じ)
